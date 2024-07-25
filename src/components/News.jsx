@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Box,
   Heading,
@@ -126,6 +126,7 @@ const News = () => {
                   </Text>
                   <Button
                     as="a"
+                    href="#"
                     size="sm"
                     colorScheme="blue"
                     variant="solid"
@@ -140,14 +141,14 @@ const News = () => {
                         <path
                           stroke="currentColor"
                           strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
+                          strokeLinejoin="round" // Properti yang benar
+                          strokeWidth="2" // Properti yang benar
                           d="M1 5h12m0 0L9 1m4 4L9 9"
                         />
                       </svg>
                     }
                   >
-                    Selengkapnya
+                    Read more
                   </Button>
                 </Box>
               </Box>
@@ -161,7 +162,7 @@ const News = () => {
           <ModalContent maxW="sm" maxH="90vh" overflow="hidden">
             <ModalHeader>{selectedItem?.title}</ModalHeader>
             <ModalCloseButton />
-            <ModalBody>
+            <ModalBody overflowY="auto">
               <Box display="flex" justifyContent="center" mb={4}>
                 <Image
                   src={selectedItem?.image}

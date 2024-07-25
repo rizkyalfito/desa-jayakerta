@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "kategori": "UMKM",
+    "judul": "Produk UMKM",
+    "deskripsi": "Produk-produk lokal dari UMKM Desa Jayakerta.",
+    "gambar": "/images/umkm.jpg"
+  },
+  {
+    "id": 2,
+    "kategori": "Pariwisata",
+    "judul": "Wisata Alam",
+    "deskripsi": "Keindahan alam yang mempesona di Desa Jayakerta.",
+    "gambar": "/images/pariwisata.jpg"
+  },
+  {
+    "id": 3,
+    "kategori": "Bumdes",
+    "judul": "Tenda Sebagai Usaha Untuk Desa",
+    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
+    "gambar": "/images/pertanian.jpg"
+  }
+]

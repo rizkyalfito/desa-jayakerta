@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Box, Heading, IconButton, Link, useDisclosure, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpointValue } from '@chakra-ui/react';
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
-import logo from '../assets/logo.jpg';
+import {HamburgerIcon } from '@chakra-ui/icons';
+// import logo from '../assets/logo.jpg';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,8 +28,8 @@ const Header = () => {
     >
       <div className="max-w-screen-lg mx-auto flex items-center justify-between">
         <Box as="a" href="/" display="flex" alignItems="center">
-          <img src={logo} alt="Logo Desa Jayakerta" className="h-10 mr-2" />
-          <Heading as="h1" fontSize="xl" className="hidden md:block text-white">
+          {/* <img src={logo} alt="Logo Desa Jayakerta" className="h-10 mr-2" /> */}
+          <Heading as="h1" fontSize="xl" className="md:block text-white">
             Desa Jayakerta
           </Heading>
         </Box>
