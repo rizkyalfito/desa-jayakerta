@@ -1,4 +1,4 @@
-import { Box, Grid, Image, Heading } from '@chakra-ui/react';
+import { Box, Grid, Image, Heading, useColorModeValue } from '@chakra-ui/react';
 
 const Gallery = () => {
   const imageUrls = [
@@ -10,9 +10,11 @@ const Gallery = () => {
     'https://via.placeholder.com/600x400?text=Image+6',
   ];
 
+  const bgColor = useColorModeValue('gray.100', 'gray.700');
+
   return (
-    <section id="gallery" className="py-16">
-      <Box bg="gray.100" p={8}>
+    <section id='gallery' className="py-16" style={{ backgroundColor: bgColor }}>
+      <Box p={8}>
         <Heading as="h2" size="xl" mb={8} textAlign="center">
           Galeri Desa Jayakerta
         </Heading>

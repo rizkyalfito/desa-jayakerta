@@ -40,3 +40,22 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Untuk menyembunyikan scrollbar secara universal */
+body {
+  overflow: hidden;
+}
+
+html {
+  overflow: hidden;
+}
+
+/* Menyembunyikan scrollbar pada elemen dengan overflow: auto atau scroll */
+::-webkit-scrollbar {
+  display: none; /* Untuk Chrome, Safari, dan Opera */
+}
+
+* {
+  -ms-overflow-style: none; /* Untuk Internet Explorer dan Edge */
+  scrollbar-width: none; /* Untuk Firefox */
+}

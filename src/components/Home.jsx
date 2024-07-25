@@ -1,6 +1,8 @@
 import Hero from './Hero';
 import News from './News';
 import Gallery from './Gallery';
+import { useColorModeValue } from '@chakra-ui/react';
+import Contact from './Contact';
 
 const homeContent = [
   { info: "Desa Jayakerta terletak di Karawang, Jawa Barat, Indonesia. Desa ini dikenal dengan keindahan alam dan keramahan penduduknya." },
@@ -9,10 +11,12 @@ const homeContent = [
 ];
 
 const Home = () => {
+  const bgColor = useColorModeValue('gray.50', 'gray.800');
+
   return (
     <>
       <Hero />
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4" style={{ backgroundColor: bgColor }}>
         <section id="home">
           <h2 className="text-2xl font-bold">Tentang Desa Jayakerta</h2>
           {homeContent.map((item, index) => (
@@ -21,6 +25,7 @@ const Home = () => {
         </section>
         <News />
         <Gallery />
+        <Contact />
       </div>
     </>
   );

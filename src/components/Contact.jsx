@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Heading, Text, Input, Textarea, Button, useToast } from '@chakra-ui/react';
+import { Box, Heading, Text, Input, Textarea, Button, useToast, useColorModeValue } from '@chakra-ui/react';
 
 const Contact = () => {
   const toast = useToast();
@@ -36,8 +36,10 @@ const Contact = () => {
     });
   };
 
+  const bgColor = useColorModeValue('gray.100', 'gray.700');
+
   return (
-    <section id="contact" className="p-4 text-center" >
+    <section id="contact" className="p-4 text-center" style={{ backgroundColor: bgColor }}>
       <div className="container mx-auto max-w-screen-lg">
         <Heading as="h2" size="xl" mb={4}>
           Hubungi Kami
