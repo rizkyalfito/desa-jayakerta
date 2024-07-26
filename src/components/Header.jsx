@@ -22,12 +22,12 @@ const Header = () => {
   return (
     <header
       className={`p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-primary' : 'bg-whitesmoke'
+        isScrolled ? 'bg-primary text-white' : 'bg-transparent text-white'
       }`}
     >
       <div className="max-w-screen-lg mx-auto flex items-center justify-between">
         <Box as="a" href="/" display="flex" alignItems="center">
-          <Heading as="h1" fontSize="xl" className="md:block text-primary">
+          <Heading as="h1" fontSize="2xl" className="md:block">
             Desa Jayakerta
           </Heading>
         </Box>
@@ -38,7 +38,7 @@ const Header = () => {
               icon={<HamburgerIcon />}
               onClick={onOpen}
               variant="ghost"
-              className="text-primary"
+              className="text-white"
             />
             <Drawer
               isOpen={isOpen}
@@ -52,19 +52,19 @@ const Header = () => {
                 <DrawerHeader>Menu</DrawerHeader>
                 <DrawerBody>
                   <Box as="nav" display="flex" flexDirection="column" alignItems="center">
-                    <Link href="/" className="block py-2 px-4 hover:underline text-primary" onClick={onClose}>
+                    <Link href="/" className="block py-2 px-4 hover:underline" onClick={onClose}>
                       Beranda
                     </Link>
-                    <Link href="#about" className="block py-2 px-4 hover:underline text-primary" onClick={onClose}>
+                    <Link href="#about" className="block py-2 px-4 hover:underline" onClick={onClose}>
                       Tentang
                     </Link>
-                    <Link href="#news" className="block py-2 px-4 hover:underline text-primary" onClick={onClose}>
+                    <Link href="#news" className="block py-2 px-4 hover:underline" onClick={onClose}>
                       Berita
                     </Link>
-                    <Link href="#gallery" className="block py-2 px-4 hover:underline text-primary" onClick={onClose}>
+                    <Link href="#gallery" className="block py-2 px-4 hover:underline" onClick={onClose}>
                       Galeri
                     </Link>
-                    <Link href="#contact" className="block py-2 px-4 hover:underline text-primary" onClick={onClose}>
+                    <Link href="#contact" className="block py-2 px-4 hover:underline" onClick={onClose}>
                       Kontak
                     </Link>
                   </Box>
@@ -73,20 +73,20 @@ const Header = () => {
             </Drawer>
           </>
         ) : (
-          <Box display="flex" alignItems="center">
-            <Link href="/" className="mx-4 text-primary hover:underline">
+          <Box display="flex" alignItems="center" className=' font-semibold'>
+            <Link href="/" className="mx-4 hover:underline">
               Beranda
             </Link>
-            <Link href="#about" className="mx-4 text-primary hover:underline">
+            <Link href="#about" className="mx-4 hover:underline">
               Tentang
             </Link>
-            <Link href="#news" className="mx-4 text-primary hover:underline">
+            <Link href="#news" className="mx-4 hover:underline">
               Berita
             </Link>
-            <Link href="#gallery" className="mx-4 text-primary hover:underline">
+            <Link href="#gallery" className="mx-4 hover:underline">
               Galeri
             </Link>
-            <Link href="#contact" className="mx-4 text-primary hover:underline">
+            <Link href="#contact" className="mx-4 hover:underline">
               Kontak
             </Link>
           </Box>

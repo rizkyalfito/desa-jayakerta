@@ -6,7 +6,6 @@ import {
   Text,
   Image,
   Button,
-  useColorModeValue,
   Icon
 } from '@chakra-ui/react';
 import { InfoOutlineIcon } from '@chakra-ui/icons';
@@ -18,17 +17,18 @@ const PotensiDesa = () => {
   const categories = [...new Set(potensiData.map(item => item.kategori))];
   const filteredData = potensiData.filter(item => item.kategori === selectedCategory);
 
-  const cardBgColor = useColorModeValue('white', 'gray.800');
-  const cardBorderColor = useColorModeValue('gray.200', 'gray.700');
-  const textColor = useColorModeValue('gray.900', 'white');
-  const contentTextColor = useColorModeValue('gray.700', 'gray.400');
+  // Warna yang digunakan
+  const cardBgColor = 'whitesmoke'; // Background card
+  const cardBorderColor = '#12372A'; // Border color
+  const textColor = '#12372A'; // Text color
+  const contentTextColor = '#12372A'; // Content text color
 
   const isEmpty = filteredData.length === 0;
 
   return (
     <section id="potensi" className="py-16">
       <div className="container mx-auto px-4">
-        <Heading as="h2" size="xl" mb={8} textAlign="center">
+        <Heading as="h2" size="xl" mb={8} textAlign="center" color={textColor}>
           Potensi Desa Jayakerta
         </Heading>
 
@@ -39,6 +39,11 @@ const PotensiDesa = () => {
               onClick={() => setSelectedCategory(category)}
               variant={selectedCategory === category ? 'solid' : 'outline'}
               colorScheme="teal"
+              borderColor={textColor}
+              color={selectedCategory === category ? 'white' : textColor}
+              bg={selectedCategory === category ? textColor : 'transparent'}
+              _hover={{ bg: textColor, color: 'white' }}
+              _focus={{ boxShadow: 'none' }}
             >
               {category}
             </Button>
