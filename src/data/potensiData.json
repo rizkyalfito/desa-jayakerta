@@ -2,21 +2,70 @@
   {
     "id": 1,
     "kategori": "UMKM",
-    "judul": "Produk UMKM",
+    "judul": "Produksi Pakcoy di Desa Jayakerta",
     "deskripsi": "Produk-produk lokal dari UMKM Desa Jayakerta.",
     "gambar": "/images/umkm.jpg"
   },
   {
     "id": 2,
+    "kategori": "UMKM",
+    "judul": "Susu Kedelai",
+    "deskripsi": "Produk-produk lokal dari UMKM Desa Jayakerta.",
+    "gambar": "/images/umkm.jpg"
+  },
+  {
+    "id": 3,
+    "kategori": "UMKM",
+    "judul": "Kerupuk Cikur",
+    "deskripsi": "Produk-produk lokal dari UMKM Desa Jayakerta.",
+    "gambar": "/images/umkm.jpg"
+  },
+  {
+    "id": 4,
     "kategori": "Pariwisata",
-    "judul": "Wisata Alam",
+    "judul": "Wisata Alam Mangrove di Dekat Jayakerta",
     "deskripsi": "Keindahan alam yang mempesona di Desa Jayakerta.",
     "gambar": "/images/pariwisata.jpg"
   },
   {
-    "id": 3,
-    "kategori": "Bumdes",
-    "judul": "Tenda Sebagai Usaha Untuk Desa",
+    "id": 5,
+    "kategori": "Pariwisata",
+    "judul": "Pantai Sedari Sebagai Alternatif Healing Dekat Jayakerta",
+    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
+    "gambar": "/images/pertanian.jpg"
+  },
+  {
+    "id": 6,
+    "kategori": "BUMDES",
+    "judul": "Tenda Sebagai Sarana Relasi Antara Desa dan Warga",
+    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
+    "gambar": "/images/pertanian.jpg"
+  },
+  {
+    "id": 7,
+    "kategori": "UMKM",
+    "judul": "Kreatif Menggunakan Kain Majun",
+    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
+    "gambar": "/images/pertanian.jpg"
+  },
+  {
+    "id": 8,
+    "kategori": "UMKM",
+    "judul": "Kue Basah",
+    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
+    "gambar": "/images/pertanian.jpg"
+  },
+  {
+    "id": 9,
+    "kategori": "UMKM",
+    "judul": "Mochi",
+    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
+    "gambar": "/images/pertanian.jpg"
+  },
+  {
+    "id": 10,
+    "kategori": "UMKM",
+    "judul": "Cemilan Sehat dan Gurih Dari Pisang",
     "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
     "gambar": "/images/pertanian.jpg"
   }

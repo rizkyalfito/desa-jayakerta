@@ -4,6 +4,7 @@ import Gallery from './Gallery';
 import { useColorModeValue } from '@chakra-ui/react';
 import PotensiDesa from './potensiDesa';
 import Location from './Location';
+import About from './About';
 
 const homeContent = [
   { info: "Desa Jayakerta terletak di Karawang, Jawa Barat, Indonesia. Desa ini dikenal dengan keindahan alam dan keramahan penduduknya." },
@@ -24,6 +25,7 @@ const Home = () => {
             <p key={index} className="mt-2 text-justify">{item.info}</p>
           ))}
         </section>
+        <About/>
         <News />
         <Gallery />
         <PotensiDesa />

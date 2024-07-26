@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   Box,
   Heading,
@@ -26,6 +26,7 @@ import heroImage from '../assets/hero-image.jpg'; // Sesuaikan path dengan lokas
 const News = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const containerRef = useRef(null);
 
   const [newsItems, setNewsItems] = useState([]);
 
@@ -49,11 +50,20 @@ const News = () => {
     onOpen();
   };
 
+  const scroll = (direction) => {
+    if (containerRef.current) {
+      const container = containerRef.current;
+      const cardWidth = container.firstChild.offsetWidth;
+      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="news" className="py-16" style={{ backgroundColor: bgColor }}>
       <div className="container mx-auto px-4">
         <Heading as="h2" size="xl" mb={8} textAlign="center">
-          Berita Terbaru
+          Kegiatan Terbaru
         </Heading>
         <Box position="relative">
           <IconButton
@@ -64,9 +74,7 @@ const News = () => {
             top="50%"
             transform="translateY(-50%)"
             zIndex="10"
-            onClick={() => {
-              document.getElementById('news-container').scrollBy({ left: -300, behavior: 'smooth' });
-            }}
+            onClick={() => scroll('left')}
           />
           <IconButton
             aria-label="Next"
@@ -76,11 +84,10 @@ const News = () => {
             top="50%"
             transform="translateY(-50%)"
             zIndex="10"
-            onClick={() => {
-              document.getElementById('news-container').scrollBy({ left: 300, behavior: 'smooth' });
-            }}
+            onClick={() => scroll('right')}
           />
           <Box
+            ref={containerRef}
             id="news-container"
             display="flex"
             overflowX="auto"
@@ -126,7 +133,6 @@ const News = () => {
                   </Text>
                   <Button
                     as="a"
-                    href="#"
                     size="sm"
                     colorScheme="blue"
                     variant="solid"
@@ -148,7 +154,7 @@ const News = () => {
                       </svg>
                     }
                   >
-                    Read more
+                    Selengkapnya
                   </Button>
                 </Box>
               </Box>
@@ -157,9 +163,9 @@ const News = () => {
         </Box>
 
         {/* Modal Component */}
-        <Modal isOpen={isOpen} onClose={onClose} size={{ base: 'sm', md: 'sm', lg: 'sm' }}>
+        <Modal isOpen={isOpen} onClose={onClose} size={{ base: 'xs', md: 'lg', lg: '2xl' }}>
           <ModalOverlay />
-          <ModalContent maxW="sm" maxH="90vh" overflow="hidden">
+          <ModalContent maxW="lg" maxH="90vh" overflow="hidden">
             <ModalHeader>{selectedItem?.title}</ModalHeader>
             <ModalCloseButton />
             <ModalBody overflowY="auto">
