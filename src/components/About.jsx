@@ -20,20 +20,36 @@ const aboutContent = [
 
 const About = () => {
   return (
-    <section id="about" className="py-16 bg-gray-100">
+    <section id="about" className="py-16 bg-whitesmoke">
       <div className="container mx-auto px-4">
-        <Heading as="h2" size="xl" mb={8} textAlign="center">
+        <Heading as="h2" size="xl" mb={8} textAlign="center" color="#12372A">
           Tentang Desa Jayakerta
         </Heading>
         <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={10}>
           {aboutContent.map((item, index) => (
-            <GridItem key={index} display="flex" flexDirection="column" alignItems="center">
-              <Image src={item.image} alt={item.title} borderRadius="md" mb={4} boxSize="200px" objectFit="cover" />
+            <GridItem
+              key={index}
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              justifyContent={item.title === 'Masyarakat Desa Jayakerta' ? 'center' : 'flex-start'}
+              textAlign={item.title === 'Masyarakat Desa Jayakerta' ? 'center' : 'left'}
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                borderRadius="md"
+                mb={4}
+                boxSize="200px"
+                objectFit="cover"
+                border="1px"
+                borderColor="#12372A"
+              />
               <Box textAlign="center">
-                <Heading as="h3" size="lg" mb={2}>
+                <Heading as="h3" size="lg" mb={2} color="#12372A">
                   {item.title}
                 </Heading>
-                <Text>{item.info}</Text>
+                <Text color="#12372A">{item.info}</Text>
               </Box>
             </GridItem>
           ))}

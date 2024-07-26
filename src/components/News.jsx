@@ -39,11 +39,11 @@ const News = () => {
     setNewsItems(updatedNewsItems);
   }, []);
 
-  const bgColor = useColorModeValue('gray.100', 'gray.700');
-  const cardBgColor = useColorModeValue('white', 'gray.800');
-  const cardBorderColor = useColorModeValue('gray.200', 'gray.700');
-  const textColor = useColorModeValue('gray.900', 'white');
-  const contentTextColor = useColorModeValue('gray.700', 'gray.400');
+  const bgColor = useColorModeValue('whitesmoke', 'gray.800');
+  const cardBgColor = 'whitesmoke';
+  const cardShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'; // Shadow untuk card
+  const textColor = '#12372A';
+  const contentTextColor = '#12372A';
 
   const handleCardClick = (item) => {
     setSelectedItem(item);
@@ -62,7 +62,7 @@ const News = () => {
   return (
     <section id="news" className="py-16" style={{ backgroundColor: bgColor }}>
       <div className="container mx-auto px-4">
-        <Heading as="h2" size="xl" mb={8} textAlign="center">
+        <Heading as="h2" size="xl" mb={8} textAlign="center" color={textColor}>
           Kegiatan Terbaru
         </Heading>
         <Box position="relative">
@@ -106,10 +106,7 @@ const News = () => {
                 key={index}
                 maxW="sm"
                 bg={cardBgColor}
-                border="1px"
-                borderColor={cardBorderColor}
-                borderRadius="lg"
-                shadow="lg"
+                shadow={cardShadow}
                 overflow="hidden"
                 margin="10px"
                 flex="0 0 auto"
@@ -125,17 +122,18 @@ const News = () => {
                       {item.title}
                     </Heading>
                   </Link>
-                  <Text fontSize="sm" color="gray.500" mb={2}>
+                  <Text fontSize="sm" color={contentTextColor} mb={2}>
                     {item.date}
                   </Text>
-                  <Text mb={3} color={contentTextColor}>
+                  <Text mb={3} color={contentTextColor} textAlign="justify">
                     {item.content.substring(0, 100)}...
                   </Text>
                   <Button
                     as="a"
                     size="sm"
-                    colorScheme="blue"
-                    variant="solid"
+                    colorScheme="teal"
+                    bg="#12372A"
+                    color="whitesmoke"
                     rightIcon={
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
@@ -147,8 +145,8 @@ const News = () => {
                         <path
                           stroke="currentColor"
                           strokeLinecap="round"
-                          strokeLinejoin="round" // Properti yang benar
-                          strokeWidth="2" // Properti yang benar
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M1 5h12m0 0L9 1m4 4L9 9"
                         />
                       </svg>
@@ -165,10 +163,10 @@ const News = () => {
         {/* Modal Component */}
         <Modal isOpen={isOpen} onClose={onClose} size={{ base: 'xs', md: 'lg', lg: '2xl' }}>
           <ModalOverlay />
-          <ModalContent maxW="lg" maxH="90vh" overflow="hidden">
+          <ModalContent bg={cardBgColor} color={textColor}>
             <ModalHeader>{selectedItem?.title}</ModalHeader>
             <ModalCloseButton />
-            <ModalBody overflowY="auto">
+            <ModalBody overflowY="auto" textAlign="justify">
               <Box display="flex" justifyContent="center" mb={4}>
                 <Image
                   src={selectedItem?.image}
@@ -184,7 +182,7 @@ const News = () => {
               </Text>
             </ModalBody>
             <ModalFooter>
-              <Button colorScheme="blue" onClick={onClose}>
+              <Button colorScheme="teal" bg="#12372A" color="whitesmoke" onClick={onClose}>
                 Close
               </Button>
             </ModalFooter>
