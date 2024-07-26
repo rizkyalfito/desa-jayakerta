@@ -3,8 +3,8 @@ import { useSpring, animated } from '@react-spring/web';
 
 const Jumbotron = () => {
   // Define background color with transparency
-  const bgColor = useColorModeValue('rgba(245, 245, 245, 0.9)', 'rgba(18, 55, 42, 0.9)');
-  const textColor = useColorModeValue('#12372A', 'whitesmoke');
+  const textColor = useColorModeValue('rgba(245, 245, 245, 0.9)', 'rgba(18, 55, 42, 0.9)');
+  const bgColor = useColorModeValue('#12372A', 'whitesmoke');
 
   // Animation values
   const propsPopulation = useSpring({ number: 50000, from: { number: 0 }, config: { duration: 2000 } });
