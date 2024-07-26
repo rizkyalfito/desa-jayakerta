@@ -3,7 +3,7 @@ import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   const textColor = useColorModeValue('whitesmoke', 'gray.800');
-  const bgColor = useColorModeValue('#12372A', 'white');
+  const bgColor = useColorModeValue('gray.800', 'white');
   
   return (
     <Box as="footer" py={8} bg={bgColor} color={textColor}>
