@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Box, Heading, IconButton, Link, useDisclosure, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpointValue } from '@chakra-ui/react';
-import {HamburgerIcon } from '@chakra-ui/icons';
-// import logo from '../assets/logo.jpg';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,13 +22,12 @@ const Header = () => {
   return (
     <header
       className={`p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-green-800' : 'bg-transparent'
+        isScrolled ? 'bg-primary' : 'bg-whitesmoke'
       }`}
     >
       <div className="max-w-screen-lg mx-auto flex items-center justify-between">
         <Box as="a" href="/" display="flex" alignItems="center">
-          {/* <img src={logo} alt="Logo Desa Jayakerta" className="h-10 mr-2" /> */}
-          <Heading as="h1" fontSize="xl" className="md:block text-white">
+          <Heading as="h1" fontSize="xl" className="md:block text-primary">
             Desa Jayakerta
           </Heading>
         </Box>
@@ -40,7 +38,7 @@ const Header = () => {
               icon={<HamburgerIcon />}
               onClick={onOpen}
               variant="ghost"
-              color="white"
+              className="text-primary"
             />
             <Drawer
               isOpen={isOpen}
@@ -54,19 +52,19 @@ const Header = () => {
                 <DrawerHeader>Menu</DrawerHeader>
                 <DrawerBody>
                   <Box as="nav" display="flex" flexDirection="column" alignItems="center">
-                    <Link href="/" className="block py-2 px-4 hover:underline" onClick={onClose}>
+                    <Link href="/" className="block py-2 px-4 hover:underline text-primary" onClick={onClose}>
                       Beranda
                     </Link>
-                    <Link href="#about" className="block py-2 px-4 hover:underline" onClick={onClose}>
+                    <Link href="#about" className="block py-2 px-4 hover:underline text-primary" onClick={onClose}>
                       Tentang
                     </Link>
-                    <Link href="#news" className="block py-2 px-4 hover:underline" onClick={onClose}>
+                    <Link href="#news" className="block py-2 px-4 hover:underline text-primary" onClick={onClose}>
                       Berita
                     </Link>
-                    <Link href="#gallery" className="block py-2 px-4 hover:underline" onClick={onClose}>
+                    <Link href="#gallery" className="block py-2 px-4 hover:underline text-primary" onClick={onClose}>
                       Galeri
                     </Link>
-                    <Link href="#contact" className="block py-2 px-4 hover:underline" onClick={onClose}>
+                    <Link href="#contact" className="block py-2 px-4 hover:underline text-primary" onClick={onClose}>
                       Kontak
                     </Link>
                   </Box>
@@ -76,19 +74,19 @@ const Header = () => {
           </>
         ) : (
           <Box display="flex" alignItems="center">
-            <Link href="/" className="mx-4 text-white hover:underline">
+            <Link href="/" className="mx-4 text-primary hover:underline">
               Beranda
             </Link>
-            <Link href="#about" className="mx-4 text-white hover:underline">
+            <Link href="#about" className="mx-4 text-primary hover:underline">
               Tentang
             </Link>
-            <Link href="#news" className="mx-4 text-white hover:underline">
+            <Link href="#news" className="mx-4 text-primary hover:underline">
               Berita
             </Link>
-            <Link href="#gallery" className="mx-4 text-white hover:underline">
+            <Link href="#gallery" className="mx-4 text-primary hover:underline">
               Galeri
             </Link>
-            <Link href="#contact" className="mx-4 text-white hover:underline">
+            <Link href="#contact" className="mx-4 text-primary hover:underline">
               Kontak
             </Link>
           </Box>
