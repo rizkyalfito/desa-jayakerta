@@ -2,8 +2,8 @@ import { Box, Grid, Text, Link, Stack, useColorModeValue, Center } from '@chakra
 import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
-  const bgColor = useColorModeValue('whitesmoke', 'gray.800');
-  const textColor = useColorModeValue('#12372A', 'white');
+  const textColor = useColorModeValue('whitesmoke', 'gray.800');
+  const bgColor = useColorModeValue('#12372A', 'white');
   
   return (
     <Box as="footer" py={8} bg={bgColor} color={textColor}>
