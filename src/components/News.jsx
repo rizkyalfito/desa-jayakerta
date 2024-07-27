@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import {
   Box,
   Heading,
@@ -6,7 +6,6 @@ import {
   Link,
   Image,
   Button,
-  useColorModeValue,
   IconButton,
   Modal,
   ModalOverlay,
@@ -16,32 +15,44 @@ import {
   ModalBody,
   ModalFooter,
   useDisclosure,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-import newsData from '../data/newsData.json'; // Pastikan path-nya sesuai
+import newsData from '../data/newsData.json';
 
-// Impor gambar
-import heroImage from '../assets/hero-image.jpg'; // Sesuaikan path dengan lokasi gambar
+import bazarImage from '../assets/news/bazar.jpg';
+import mengajarImage from '../assets/news/mengajar.jpg';
+import dmImage from '../assets/news/dm.jpg';
+import perpuslingImage from '../assets/news/perpusling.jpg';
+import jumsihImage from '../assets/news/jumsih.jpg';
+import plangImage from '../assets/news/plang.jpg';
+import puskesosImage from '../assets/news/puskesos.jpg';
+import bibitImage from '../assets/news/bibit.jpg';
+import bullyingImage from '../assets/news/bullying.jpg';
+
+const imageMap = {
+  './assets/news/bazar.jpg': bazarImage,
+  './assets/news/mengajar.jpg': mengajarImage,
+  './assets/news/dm.jpg': dmImage,
+  './assets/news/perpusling.jpg': perpuslingImage,
+  './assets/news/jumsih.jpg': jumsihImage,
+  './assets/news/plang.jpg': plangImage,
+  './assets/news/puskesos.jpg': puskesosImage,
+  './assets/news/bibit.jpg': bibitImage,
+  './assets/news/bullying.jpg': bullyingImage,
+
+};
 
 const News = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const containerRef = useRef(null);
 
-  const [newsItems, setNewsItems] = useState([]);
-
-  useEffect(() => {
-    // Mengganti path gambar dengan gambar yang diimpor
-    const updatedNewsItems = newsData.map(item => ({
-      ...item,
-      image: heroImage, // Ganti dengan gambar yang sesuai
-    }));
-    setNewsItems(updatedNewsItems);
-  }, []);
+  const [newsItems] = useState(newsData);
 
   const bgColor = useColorModeValue('whitesmoke', 'gray.800');
   const cardBgColor = 'whitesmoke';
-  const cardShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'; // Shadow untuk card
+  const cardShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
   const textColor = '#12372A';
   const contentTextColor = '#12372A';
 
@@ -114,7 +125,14 @@ const News = () => {
                 onClick={() => handleCardClick(item)}
               >
                 <Link>
-                  <Image src={item.image} alt={item.title} borderTopRadius="lg" />
+                  <Image
+                    src={imageMap[item.image]}
+                    alt={item.title}
+                    borderTopRadius="lg"
+                    height="200px" // Set a fixed height for all images
+                    width="100%" // Ensure images fill the card width
+                    objectFit="cover" // Ensure images maintain aspect ratio and fill the height
+                  />
                 </Link>
                 <Box p={5}>
                   <Link>
@@ -169,7 +187,7 @@ const News = () => {
             <ModalBody overflowY="auto" textAlign="justify">
               <Box display="flex" justifyContent="center" mb={4}>
                 <Image
-                  src={selectedItem?.image}
+                  src={imageMap[selectedItem?.image]}
                   alt={selectedItem?.title}
                   borderRadius="md"
                   maxW="100%" // Gambar memenuhi lebar modal
