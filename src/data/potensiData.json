@@ -3,70 +3,70 @@
     "id": 1,
     "kategori": "UMKM",
     "judul": "Produksi Pakcoy di Desa Jayakerta",
-    "deskripsi": "Produk-produk lokal dari UMKM Desa Jayakerta.",
-    "gambar": "/images/umkm.jpg"
+    "deskripsi": "Pakcoy segar hasil budidaya petani lokal Desa Jayakerta. Tanaman ini tumbuh subur di tanah desa yang kaya akan nutrisi, menjadikannya bahan makanan yang bergizi dan berkualitas tinggi.",
+    "gambar": "./assets/potensi/pakcoy.jpg"
   },
   {
     "id": 2,
     "kategori": "UMKM",
-    "judul": "Susu Kedelai",
-    "deskripsi": "Produk-produk lokal dari UMKM Desa Jayakerta.",
-    "gambar": "/images/umkm.jpg"
+    "judul": "Jajanan Anak",
+    "deskripsi": "Aneka jajanan tradisional dan modern untuk anak-anak yang diproduksi oleh UMKM di Desa Jayakerta. Nikmati camilan sehat dan lezat yang dibuat dengan bahan-bahan pilihan.",
+    "gambar": "./assets/potensi/jajanan.jpg"
   },
   {
     "id": 3,
     "kategori": "UMKM",
     "judul": "Kerupuk Cikur",
-    "deskripsi": "Produk-produk lokal dari UMKM Desa Jayakerta.",
-    "gambar": "/images/umkm.jpg"
+    "deskripsi": "Kerupuk cikur khas Desa Jayakerta yang gurih dan renyah. Terbuat dari bahan-bahan alami dan rempah pilihan, kerupuk ini menjadi camilan favorit bagi semua kalangan.",
+    "gambar": "./assets/potensi/kerupuk.jpg"
   },
   {
     "id": 4,
     "kategori": "Pariwisata",
     "judul": "Wisata Alam Mangrove di Dekat Jayakerta",
-    "deskripsi": "Keindahan alam yang mempesona di Desa Jayakerta.",
-    "gambar": "/images/pariwisata.jpg"
+    "deskripsi": "Eksplorasi keindahan alam hutan mangrove di sekitar Desa Jayakerta. Tempat ini menawarkan pemandangan yang memukau serta pengalaman alam yang tak terlupakan.",
+    "gambar": "./assets/potensi/mangrove.jpeg"
   },
   {
     "id": 5,
     "kategori": "Pariwisata",
     "judul": "Pantai Sedari Sebagai Alternatif Healing Dekat Jayakerta",
-    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
-    "gambar": "/images/pertanian.jpg"
+    "deskripsi": "Nikmati keindahan Pantai Sedari yang menawarkan ketenangan dan keindahan alam. Lokasi yang sempurna untuk relaksasi dan melepaskan stres sehari-hari.",
+    "gambar": "./assets/potensi/sedari.jpg"
   },
   {
     "id": 6,
     "kategori": "BUMDES",
     "judul": "Tenda Sebagai Salah Satu Produk Badan Usaha Milik Desa Untuk Meningkatkan Pendapatan Desa",
-    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
-    "gambar": "/images/pertanian.jpg"
+    "deskripsi": "BUMDES Jayakerta memproduksi tenda berkualitas tinggi yang dapat digunakan untuk berbagai acara. Produk ini dihasilkan untuk meningkatkan pendapatan desa melalui inovasi lokal.",
+    "gambar": "./assets/potensi/bazar.jpg"
   },
   {
     "id": 7,
     "kategori": "UMKM",
     "judul": "Kreatif Menggunakan Kain Majun",
-    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
-    "gambar": "/images/pertanian.jpg"
+    "deskripsi": "Inovasi produk kain majun dari UMKM Desa Jayakerta yang kreatif dan ramah lingkungan. Produk ini menunjukkan kemampuan warga dalam menciptakan barang bernilai tambah dari bahan sederhana.",
+    "gambar": "./assets/potensi/majun.jpg"
   },
   {
     "id": 8,
     "kategori": "UMKM",
     "judul": "Kue Basah",
-    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
-    "gambar": "/images/pertanian.jpg"
+    "deskripsi": "Kue basah tradisional dengan cita rasa khas Desa Jayakerta. Dibuat dari bahan alami dengan resep turun-temurun, kue ini menjadi hidangan yang digemari banyak orang.",
+    "gambar": "./assets/potensi/kue-basah.jpg"
   },
   {
     "id": 9,
     "kategori": "UMKM",
     "judul": "Mochi",
-    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
-    "gambar": "/images/pertanian.jpg"
+    "deskripsi": "Mochi lembut dan kenyal yang diproduksi oleh UMKM di Desa Jayakerta. Dengan berbagai varian rasa, mochi ini menjadi camilan manis yang sempurna untuk segala kesempatan.",
+    "gambar": "./assets/potensi/mochi.jpg"
   },
   {
     "id": 10,
     "kategori": "UMKM",
     "judul": "Cemilan Sehat dan Gurih Dari Pisang",
-    "deskripsi": "Pertanian organik yang ramah lingkungan di Desa Jayakerta.",
-    "gambar": "/images/pertanian.jpg"
+    "deskripsi": "Keripik pisang sehat dan gurih yang diproduksi dari pisang pilihan Desa Jayakerta. Camilan ini kaya akan nutrisi dan sangat cocok untuk teman santai.",
+    "gambar": "./assets/potensi/kripik.jpg"
   }
 ]

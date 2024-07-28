@@ -40,7 +40,6 @@ const imageMap = {
   './assets/news/puskesos.jpg': puskesosImage,
   './assets/news/bibit.jpg': bibitImage,
   './assets/news/bullying.jpg': bullyingImage,
-
 };
 
 const News = () => {
@@ -79,23 +78,31 @@ const News = () => {
         <Box position="relative">
           <IconButton
             aria-label="Previous"
-            icon={<ChevronLeftIcon />}
+            icon={<ChevronLeftIcon boxSize={8} />} // Increase icon size
+            size="lg" // Increase button size
+            bg="rgba(18, 55, 42, 0.5)" // Make background more transparent
+            color="whitesmoke"
             position="absolute"
             left="0"
             top="50%"
             transform="translateY(-50%)"
             zIndex="10"
             onClick={() => scroll('left')}
+            _hover={{ bg: 'emerald-900' }} // Change hover color
           />
           <IconButton
             aria-label="Next"
-            icon={<ChevronRightIcon />}
+            icon={<ChevronRightIcon boxSize={8} />} // Increase icon size
+            size="lg" // Increase button size
+            bg="rgba(18, 55, 42, 0.5)" // Make background more transparent
+            color="whitesmoke"
             position="absolute"
             right="0"
             top="50%"
             transform="translateY(-50%)"
             zIndex="10"
             onClick={() => scroll('right')}
+            _hover={{ bg: 'emerald-900' }} // Change hover color
           />
           <Box
             ref={containerRef}
