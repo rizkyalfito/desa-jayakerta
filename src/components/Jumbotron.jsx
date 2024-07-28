@@ -7,9 +7,9 @@ const Jumbotron = () => {
   const bgColor = useColorModeValue('#12372A', 'whitesmoke');
 
   // Animation values
-  const propsPopulation = useSpring({ number: 50000, from: { number: 0 }, config: { duration: 2000 } });
-  const propsArea = useSpring({ number: 120, from: { number: 0 }, config: { duration: 2000 } });
-  const propsVillages = useSpring({ number: 12, from: { number: 0 }, config: { duration: 2000 } });
+  const propsPopulation = useSpring({ number: 6676, from: { number: 0 }, config: { duration: 4000 } });
+  const propsArea = useSpring({ number:  422.00, from: { number: 0 }, config: { duration: 4000 } });
+  const propsVillages = useSpring({ number: 3, from: { number: 0 }, config: { duration: 4000 } });
 
   return (
     <Box as="section" py={16} bg={bgColor} color={textColor} className="rounded-md">
@@ -29,7 +29,7 @@ const Jumbotron = () => {
           {/* Area Size */}
           <Box flex="1" textAlign="center">
             <Heading as="h3" size="lg" mb={2}>
-              <animated.span>{propsArea.number.to(n => `${Math.floor(n)} km²`)}</animated.span>
+              <animated.span>{propsArea.number.to(n => `${Math.floor(n)} ha`)}</animated.span>
             </Heading>
             <Text fontSize="lg">Luas Wilayah</Text>
           </Box>
@@ -39,7 +39,7 @@ const Jumbotron = () => {
             <Heading as="h3" size="lg" mb={2}>
               <animated.span>{propsVillages.number.to(n => Math.floor(n))}</animated.span>
             </Heading>
-            <Text fontSize="lg">Jumlah Desa</Text>
+            <Text fontSize="lg">Jumlah Dusun</Text>
           </Box>
         </Flex>
       </div>

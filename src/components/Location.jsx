@@ -40,10 +40,11 @@ const Location = () => {
               Informasi Geografis
             </Heading>
             <Text color={textColor}>
-              Desa Jayakerta, Kecamatan XYZ<br />
-              Kabupaten ABC, Provinsi DEF<br />
-              Telp: (123) 456-7890<br />
-              Email: desa.jayakerta@example.com
+            Batas Wilayah Desa :<br />
+            Sebelah utara   - DESA SUKASARI<br />
+            Sebelah selatan - DESA JAYAMAKMUR <br />
+            Sebelah timur   - DESA SUKASARI <br />
+            Sebelah barat   - DESA KERTAJAYA <br />
             </Text>
           </Box>
         </Grid>

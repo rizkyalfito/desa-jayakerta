@@ -98,7 +98,7 @@ const PotensiDesa = () => {
                 p={5}
               >
                 <Box w="100%" h="200px" overflow="hidden" mb={4}>
-                  <Image src={imageMap[item.gambar]} alt={item.judul} w="100%" h="100%" objectFit="cover" />
+                  <Image src={imageMap[item.gambar]} alt={item.judul} w="100%" h="100%" objectFit="cover" className='rounded-s' />
                 </Box>
                 <Heading as="h5" size="md" mb={2} fontWeight="bold" color={textColor}>
                   {item.judul}

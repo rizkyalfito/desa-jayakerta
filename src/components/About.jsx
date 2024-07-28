@@ -1,20 +1,18 @@
 import { Box, Heading, Text, Image, Grid, GridItem } from '@chakra-ui/react';
 
+import sejarahImage from '../assets/sejarah.jpg';
+import masyarakatImage from '../assets/masyarakat.jpg';
+
 const aboutContent = [
   {
-    title: 'Sejarah Desa Jayakerta',
-    info: 'Desa Jayakerta adalah sebuah desa yang terletak di Karawang, Jawa Barat, Indonesia. Desa ini memiliki sejarah panjang yang kaya akan budaya dan tradisi.',
-    image: "./assets/hero-image.jpg",
-  },
-  {
-    title: 'Potensi Desa Jayakerta',
-    info: 'Desa Jayakerta dikenal dengan produk kerajinan tangan dan produk lokal berkualitas tinggi, yang dipasarkan baik di dalam negeri maupun luar negeri.',
-    image: "../assets/hero-image.jpg",
+    title: 'TentangDesa Jayakerta',
+    info: 'Desa Jayakerta adalah sebuah desa yang terletak di Kabupaten Karawang, Provinsi Jawa Barat, Indonesia. Terletak di wilayah yang subur, Desa Jayakerta dikenal sebagai pusat pertanian dengan hamparan sawah yang luas dan hijau.',
+    image: sejarahImage,
   },
   {
     title: 'Masyarakat Desa Jayakerta',
-    info: 'Masyarakat Desa Jayakerta sangat menjunjung tinggi nilai-nilai gotong royong dan kebersamaan, yang tercermin dalam berbagai kegiatan sosial dan budaya yang rutin diadakan.',
-    image: "../assets/hero-image.jpg",
+    info: 'Dengan mata pencaharian utama masyarakat adalah pertanian, serta Sumber Daya Manusia yang jika dibina dan diarahkan dengan baik akan menjadi objek pembangunan. Kecamatan Jayakerta memiliki beberapa produk unggulan, di antaranya produk padi dari lahan sawah yang merupakan sektor dominan.',
+    image: masyarakatImage,
   },
 ];
 

@@ -1,5 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Box, Heading, IconButton, Link, useDisclosure, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, useBreakpointValue } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  IconButton,
+  Link,
+  useDisclosure,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  useBreakpointValue,
+} from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 
 const Header = () => {
@@ -27,7 +40,7 @@ const Header = () => {
     >
       <div className="max-w-screen-lg mx-auto flex items-center justify-between">
         <Box as="a" href="/" display="flex" alignItems="center">
-          <Heading as="h1" fontSize="2xl" className="md:block">
+          <Heading as="h1" fontSize="2xl" className="md:block text-white">
             Desa Jayakerta
           </Heading>
         </Box>
@@ -35,17 +48,12 @@ const Header = () => {
           <>
             <IconButton
               aria-label="Toggle Menu"
-              icon={<HamburgerIcon />}
+              icon={<HamburgerIcon w={9} h={9} />}
               onClick={onOpen}
               variant="ghost"
               className="text-white"
             />
-            <Drawer
-              isOpen={isOpen}
-              onClose={onClose}
-              placement="left"
-              size="full"
-            >
+            <Drawer isOpen={isOpen} onClose={onClose} placement="left" size="full">
               <DrawerOverlay />
               <DrawerContent>
                 <DrawerCloseButton />
@@ -73,7 +81,7 @@ const Header = () => {
             </Drawer>
           </>
         ) : (
-          <Box display="flex" alignItems="center" className=' font-semibold'>
+          <Box display="flex" alignItems="center" className="font-semibold text-white">
             <Link href="/" className="mx-4 hover:underline">
               Beranda
             </Link>

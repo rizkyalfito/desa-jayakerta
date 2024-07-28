@@ -15,10 +15,8 @@ const Footer = () => {
               Informasi Desa
             </Text>
             <Text mb={2} textAlign="justify">
-              Desa Jayakerta, Kecamatan XYZ<br />
-              Kabupaten ABC, Provinsi DEF<br />
-              Telp: (123) 456-7890<br />
-              Email: desa.jayakerta@example.com
+              Desa Jayakerta, Kecamatan Jayakerta<br />
+              Kabupaten Karawang, Provinsi Jawa Barat<br />
             </Text>
             <Text textAlign="center">
               © 2024 Desa Jayakerta. All rights reserved.
