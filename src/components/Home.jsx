@@ -10,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { useEffect } from 'react';
+import Profil from './Profil';
 
 
 const Home = () => {
@@ -30,6 +31,9 @@ const Home = () => {
         </div>
         <div data-aos="fade-up">
           <News />
+        </div>
+        <div data-aos="fade-down">
+          <Profil />
         </div>
         <div data-aos="fade-up">
           <Jumbotron/>
