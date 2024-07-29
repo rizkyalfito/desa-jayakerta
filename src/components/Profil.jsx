@@ -6,8 +6,17 @@ const Profil = () => {
   return (
     <Box as="section" py={16} className="rounded-md">
       <div className="container mx-auto px-4">
-        <Grid templateColumns={{ base: '1fr', md: 'auto auto' }} gap={4} alignItems="center">
-          <Box display="flex" justifyContent="flex-end" textAlign="right" className="flex-col">
+        <Grid 
+          templateColumns={{ base: '1fr', md: 'auto auto' }} 
+          gap={4} 
+          alignItems="center"
+        >
+          <Box 
+            display="flex" 
+            justifyContent={{ base: 'center', md: 'flex-end' }} 
+            textAlign={{ base: 'center', md: 'right' }} 
+            className="flex-col"
+          >
             <Heading as="h2" size="lg" color={textColor} mb={2}>
               Profil Desa Jayakerta
             </Heading>
@@ -15,9 +24,13 @@ const Profil = () => {
               Kabupaten Karawang
             </Heading>
           </Box>
-          <Box display="flex" justifyContent="left">
+          <Box 
+            display="flex" 
+            justifyContent="left" 
+            maxW={{ base: '100%', md: '420px' }}
+          >
             <iframe
-              width="420"
+              width="100%"
               height="236.25"
               src="https://www.youtube.com/embed/_GEGDccMdfk?si=UUnb774INBwLPqNA"
               title="Profil Desa Jayakerta"
