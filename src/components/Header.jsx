@@ -94,8 +94,8 @@ const Header = () => {
             <Link href="#gallery" className="mx-4 hover:underline">
               Galeri
             </Link>
-            <Link href="#contact" className="mx-4 hover:underline">
-              Kontak
+            <Link href="#location" className="mx-4 hover:underline">
+              Peta
             </Link>
           </Box>
         )}
