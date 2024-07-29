@@ -17,7 +17,7 @@ import kerupukImage from '../assets/potensi/kerupuk.jpg';
 import mangroveImage from '../assets/potensi/mangrove.jpeg';
 import sedariImage from '../assets/potensi/sedari.jpg';
 import bazarImage from '../assets/potensi/bazar.jpg';
-import majunImage from '../assets/potensi/majun.png';
+import majunImage from '../assets/potensi/majun.jpg';
 import kueBasahImage from '../assets/potensi/kue-basah.jpg';
 import mochiImage from '../assets/potensi/mochi.jpg';
 import keripikImage from '../assets/potensi/kripik.jpg';
@@ -30,7 +30,7 @@ const imageMap = {
   './assets/potensi/mangrove.jpeg': mangroveImage,
   './assets/potensi/sedari.jpg': sedariImage,
   './assets/potensi/bazar.jpg': bazarImage,
-  './assets/potensi/majun.png': majunImage,
+  './assets/potensi/majun.jpg': majunImage,
   './assets/potensi/kue-basah.jpg': kueBasahImage,
   './assets/potensi/mochi.jpg': mochiImage,
   './assets/potensi/kripik.jpg': keripikImage,

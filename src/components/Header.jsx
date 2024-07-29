@@ -50,8 +50,8 @@ const Header = () => {
               aria-label="Toggle Menu"
               icon={<HamburgerIcon w={9} h={9} />}
               onClick={onOpen}
-              variant="ghost"
-              className="text-white"
+              variant="unstyled"
+              className={` ${isScrolled ? 'text-black' : 'text-white'}`}
             />
             <Drawer isOpen={isOpen} onClose={onClose} placement="left" size="full">
               <DrawerOverlay />
@@ -72,8 +72,8 @@ const Header = () => {
                     <Link href="#gallery" className="block py-2 px-4 hover:underline" onClick={onClose}>
                       Galeri
                     </Link>
-                    <Link href="#contact" className="block py-2 px-4 hover:underline" onClick={onClose}>
-                      Kontak
+                    <Link href="#location" className="block py-2 px-4 hover:underline" onClick={onClose}>
+                      Peta
                     </Link>
                   </Box>
                 </DrawerBody>

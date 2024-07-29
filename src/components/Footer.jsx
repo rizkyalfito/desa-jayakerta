@@ -1,5 +1,5 @@
 import { Box, Grid, Text, Link, Stack, useColorModeValue, Center } from '@chakra-ui/react';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram,FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   const textColor = useColorModeValue('whitesmoke', 'gray.800');
@@ -32,6 +32,9 @@ const Footer = () => {
           <Stack direction="row" spacing={4} justify="center">
             <Link href="https://instagram.com/kkndesajayakerta2024" isExternal>
               <FaInstagram size="24px" />
+            </Link>
+            <Link href="https://www.youtube.com/@KKNDesaJayakerta2024" isExternal>
+              <FaYoutube size="24px" />
             </Link>
           </Stack>
         </Box>
